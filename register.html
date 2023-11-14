@@ -5,30 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style/login.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-  <title>Login</title>
+  <title>register</title>
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="row min-vh-100">
       <div class="col-lg d-flex align-items-center" style="position: relative;">
-        <div class="rounded-end-5"
-          style="position: absolute; top: 0; bottom: 0; left: 0; width: 65%; background-color: #AFB3FF; z-index: 0;">
+        <div
+          style="position: absolute; top: -10%; bottom: 30%; left: 21%; width: 45%; background-color: #656ED3; z-index: 0; border-bottom-left-radius: 25%; border-bottom-right-radius: 25%; transform: rotate(-10deg);">
         </div>
         
-        <img src="image/login.png" alt="" class="w-100 py-5 px-4" style="position: relative; z-index: 1;">
+        <div
+          style="position: absolute; top: 0; bottom: 30%; left: 25%; width: 50%; background-color: #AFB3FF; z-index: 1; border-bottom-left-radius: 25%; border-bottom-right-radius: 25%;">
+        </div>
+
+        <img src="image/register.png" alt="" class="w-100 py-5 px-4" style="position: relative; z-index: 2;">
       </div>
 
       <div class="col-lg d-flex align-items-center justify-content-center">
         <div style="width: 500px;">
           <div class="text-center my-5">
             <img src="image/logo-babiz.png" alt="" class="mb-5" width="180px">
-            <h1>LOGIN</h1>
+            <h1>Daftar Akun UMKM</h1>
           </div>
+
+          <div class="mb-4">
+            <label for="name" class="form-label">UMKM Name</label>
+            <input type="name" class="form-control rounded-pill" id="name" style="border-color: #656ED3;">
+          </div>
+
           <div class="mb-4">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control rounded-pill" id="email" placeholder="name@example.com"
@@ -36,26 +45,25 @@
           </div>
 
           <div class="mb-4">
-            <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" class="form-control rounded-pill"
+            <label for="Password" class="form-label">Password</label>
+            <input type="password" id="Password" class="form-control rounded-pill" aria-describedby="passwordHelpBlock"
+              style="border-color: #656ED3;">
+          </div>
+
+          <div class="mb-4">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" id="confirmPassword" class="form-control rounded-pill"
               aria-describedby="passwordHelpBlock" style="border-color: #656ED3;">
           </div>
 
-          <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Remember me
-            </label>
-          </div>
-
           <div class="d-grid mb-5">
-            <button class="btn rounded-pill fw-bold" style="background-color: #FFF200;" type="button">Login</button>
+            <button class="btn rounded-pill fw-bold" style="background-color: #FFF200;" type="button">Register</button>
           </div>
 
           <div class="text-center mb-5">
             <p class="mb-5">
-              Belum Punya Akun?
-              <a href="register.html" class="text-black text-decoration-none fw-bold">Daftar</a>
+              Sudah Punya Akun?
+              <a href="login.html" class="text-black text-decoration-none fw-bold">Login</a>
             </p>
 
             <a href="https://www.facebook.com" class="text-decoration-none">
