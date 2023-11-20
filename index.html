@@ -50,6 +50,107 @@
   </nav>
 
   <main class="container my-4">
+
+    <header>
+      <h1 style="color: black;">Berdayakan <span style="color: yellow;">Banyumas</span>
+      </h1>
+    </header>
+
+    <div class="container">
+      <div id="main-content">
+      </div>
+
+      <div id="sidebar">
+        <div class="umkm-section">
+          <img src="image/beranda1.png" width="100%" height="auto" style="margin-top: -100px;" alt="UMKM Image">
+        </div>
+      </div>
+
+      <style>
+        .umkm-section {
+          text-align: center;
+
+        }
+
+        .umkm-section strong {
+          border-bottom: 2px solid #333;
+          padding-bottom: 5px;
+        }
+      </style>
+
+      <div class="umkm-section">
+        <p><strong>Top UMKM</strong></p>
+      </div>
+    </div>
+
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        overflow: hidden;
+      }
+
+      .columns {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .column {
+        width: 30%;
+        box-sizing: border-box;
+        margin-right: 10px;
+      }
+
+      .column:last-child {
+        margin-right: 0;
+      }
+
+      .column img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+
+      }
+
+      .column p {
+        font-size: 14px;
+        margin: 10px 0;
+        padding: 5px;
+
+      }
+
+      @media (max-width: 768px) {
+        .columns {
+          flex-direction: column;
+        }
+
+        .column {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <img src="image/mi.jpg" alt="Image 1">
+          <p>Mixue</p>
+        </div>
+        <div class="column">
+          <img src="image/mi.jpg" alt="Image 2">
+          <p>Mixue</p>
+        </div>
+        <div class="column">
+          <img src="image/mi.jpg" alt="Image 3">
+          <p>Mixue</p>
+        </div>
+      </div>
+    </div>
+
+
   </main>
 
   <footer class="py-3 rounded-top-4 mt-auto" style="background-color: #FFF200;">
