@@ -54,16 +54,117 @@
     <div class="row g-5">
       <div class="col-12 col-lg-4">
         <img src="image/profil.png" alt="" class="w-100 rounded-circle mb-5">
-        <div>
+
+        <div class="d-grid gap-2 mb-4">
+          <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit
+            Profil</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade modal-xl" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Profil</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="photoProfil" class="form-label">Photo Profil</label>
+                    <input class="form-control" type="file" id="photoProfil">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="namaUsaha" class="form-label">Nama Usaha</label>
+                    <input type="text" class="form-control" id="namaUsaha" value="Usaha Apa aja">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="noWhatsApp" class="form-label">Nomer WhatsApp</label>
+                    <input type="number" class="form-control" id="noWhatsApp" value="081234567890">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="instagram" class="form-label">Username Instagram</label>
+                    <input type="text" class="form-control" id="instagram" value="muhammadramdani.id">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="googleMaps" class="form-label">Link Google Maps</label>
+                    <input type="text" class="form-control" id="googleMaps"
+                      value="https://maps.app.goo.gl/6Rq52DLWDTT5p7ZV6">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="deskripsi" class="form-label">Deskripsi</label>
+                    <textarea class="form-control" id="deskripsi" rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit molestiae nesciunt qui natus aliquid asperiores explicabo sed possimus rerum iusto modi adipisci sunt nulla dolore cupiditate ex fugiat similique, velit, vel laudantium! Delectus repellendus dolorum suscipit tempore ad dolore repudiandae beatae cum eligendi, id eum esse nemo veniam ex.</textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
           <a href="#" class="text-decoration-none text-black">
             <i class="bi bi-whatsapp fs-5 me-3"></i>081234567890
           </a>
         </div>
+
+        <div class="mb-3">
+          <a href="#" class="text-decoration-none text-black">
+            <i class="bi bi-instagram fs-5 me-3"></i>@username
+          </a>
+        </div>
+
+        <div class="mb-3">
+          <a href="#" class="text-decoration-none text-black">
+            <i class="bi bi-geo-alt fs-5 me-3"></i>Lokasi
+          </a>
+        </div>
       </div>
       <div class="col-12 col-lg-8">
-        <h6>Nama Produk</h6>
-        <h5>Rp. 0.000.000</h5>
-        <a href="detail-umkm.html" class="text-decoration-none text-black">Nama UMKM</a>
+        <div class="mb-5">
+          <h5>Nama Usaha</h5>
+          <p>Usaha Apa Aja</p>
+        </div>
+
+        <div class="mb-5">
+          <h5>Deskripsi</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit molestiae nesciunt qui
+            natus aliquid asperiores explicabo sed possimus rerum iusto modi adipisci sunt nulla dolore cupiditate ex
+            fugiat similique, velit, vel laudantium! Delectus repellendus dolorum suscipit tempore ad dolore repudiandae
+            beatae cum eligendi, id eum esse nemo veniam ex.</p>
+        </div>
+
+        <div class="mb-5">
+          <h5>Galeri</h5>
+          <div class="input-group my-3">
+            <input type="file" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+              <img src="image/noimage.png" alt="" class="w-100 rounded-4">
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+              <img src="image/noimage.png" alt="" class="w-100 rounded-4">
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+              <img src="image/noimage.png" alt="" class="w-100 rounded-4">
+            </div>
+            <div class="col-12 col-md-6 mb-4">
+              <img src="image/noimage.png" alt="" class="w-100 rounded-4">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
