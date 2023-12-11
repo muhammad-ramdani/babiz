@@ -38,7 +38,7 @@
             <a class="nav-link" href="galeri.html">Galeri</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link active" href="produk.html">Produk</a>
+            <a class="nav-link active disabled" href="produk.html">Produk</a>
           </li>
         </ul>
       </div>
@@ -47,6 +47,387 @@
 
   <main class="container my-4">
     <h2 class="text-center mb-5">Produk</h2>
+
+    <div class="mb-4">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary rounded-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="bi bi-plus-lg mx-2"></i>
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content rounded-4">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Produk</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="inputGambar" class="form-label">Gambar Produk</label>
+                <input class="form-control rounded-pill" type="file" id="inputGambar" accept="image/*">
+              </div>
+
+              <div class="mb-3">
+                <label for="namaProduk" class="form-label">Nama Produk</label>
+                <input type="text" class="form-control rounded-pill" id="namaProduk">
+              </div>
+
+              <div class="mb-3">
+                <label for="hargaProduk" class="form-label">Harga Produk</label>
+                <input type="number" class="form-control rounded-pill" id="hargaProduk">
+              </div>
+
+              <div class="mb-3">
+                <label for="deskripsiProduk" class="form-label">Deskripsi Produk</label>
+                <textarea class="form-control rounded-4" id="deskripsiProduk" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary rounded-4" data-bs-dismiss="modal">Tutup</button>
+              <button type="button" class="btn btn-primary rounded-4">Simpan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4 mb-5">
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card rounded-4">
+          <div class="card-body">
+            <img src="../image/produk.png" class="card-img-top rounded-4 mb-3" alt="...">
+            <p class="card-title">Nama Produk</p>
+            <h6 class="card-text">Rp. 0.000.000</h6>
+
+            <div class="d-grid gap-2 mb-2">
+              <a class="btn btn-outline-info rounded-4" href="detail-produk.html" role="button">Detail</a>
+            </div>
+
+            <div class="row g-2">
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-warning rounded-4" data-bs-toggle="modal"
+                    data-bs-target="#edit">
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-outline-danger rounded-4">
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content rounded-4">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editLabel">Ubah Produk</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="inputGambar" class="form-label">Gambar Produk</label>
+              <input class="form-control rounded-pill" type="file" id="inputGambar" accept="image/*">
+            </div>
+
+            <div class="mb-3">
+              <label for="namaProduk" class="form-label">Nama Produk</label>
+              <input type="text" class="form-control rounded-pill" id="namaProduk" value="Nama Produk">
+            </div>
+
+            <div class="mb-3">
+              <label for="hargaProduk" class="form-label">Harga Produk</label>
+              <input type="number" class="form-control rounded-pill" id="hargaProduk" value="10000">
+            </div>
+
+            <div class="mb-3">
+              <label for="deskripsiProduk" class="form-label">Deskripsi Produk</label>
+              <textarea class="form-control rounded-4" id="deskripsiProduk"
+                rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nihil deleniti adipisci consequuntur exercitationem quod ea, illum voluptate suscipit sunt molestiae esse veritatis velit ad voluptatum ut dolorum! Explicabo, reprehenderit ipsam soluta officiis quas et itaque illum assumenda tempore debitis vero, provident similique. Ratione, quod. Velit, aspernatur! Sequi alias possimus libero nisi iste laudantium omnis, totam magnam, magni eos ut quas quam? Voluptatum nobis cum impedit enim qui perspiciatis fuga, ducimus molestiae expedita laborum aspernatur! Sunt veniam nam dolor pariatur impedit optio doloribus iusto molestiae. Eum dolorum, non id quos quod aliquam vel saepe corrupti natus, harum consequuntur est accusantium!</textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary rounded-4" data-bs-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-primary rounded-4">Simpan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </main>
 
   <footer class="py-3 rounded-top-4 mt-auto" style="background-color: #FFF200;">
