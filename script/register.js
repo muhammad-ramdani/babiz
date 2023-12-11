@@ -4,17 +4,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 // import { getDatabase } from "firebase/database";
 import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBmluS-m1jHTbBnO1zRl2qmfIRRgMl3tHo",
-  authDomain: "babizfinder-app.firebaseapp.com",
-  databaseURL: "https://babizfinder-app-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "babizfinder-app",
-  storageBucket: "babizfinder-app.appspot.com",
-  messagingSenderId: "873975088597",
-  appId: "1:873975088597:web:dba11f7f88cb43674e695c",
-};
+// import { firebaseConfig } from '/script/config.js';
+import { firebaseConfig } from '/script/config.js';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

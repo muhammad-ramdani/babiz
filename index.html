@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="shortcut icon" href="image/logo-babiz.png" type="image/x-icon">
 
   <title>Babiz</title>
 </head>
@@ -36,16 +37,9 @@
           <li class="nav-item me-4">
             <a class="nav-link" href="umkm.html">UMKM</a>
           </li>
-          <li class="nav-item me-4">
-            <a class="nav-link" href="favorite.html">Favorite</a>
+          <li class="nav-item text-center">
+            <a class="btn btn-light rounded-pill" href="login.html" role="button">Login UMKM</a>
           </li>
-          <li class="nav-item me-4">
-            <a class="nav-link" href="artikel.html">Artikel</a>
-          </li>
-          <div class="text-end">
-            <button class="btn btn-danger rounded-pill d-none" id="logoutBtn">Logout</button>
-            <a class="btn btn-light rounded-pill" href="login.html" role="button" id="loginBtn">Login UMKM</a>
-          </div>
         </ul>
       </div>
     </div>
@@ -54,7 +48,7 @@
 
   <main class="container my-4">
     <header>
-      <h1 style="color: black;">Berdayakan <span style="color: yellow;">Banyumas</span>
+      <h1 style="color: black;">Berdayakan <span style="color: #FFF200;">Banyumas</span>
       </h1>
     </header>
 
@@ -64,24 +58,56 @@
 
       <div id="sidebar">
         <div class="umkm-section">
-          <img src="image/beranda1.png" width="100%" height="auto" style="margin-top: -100px;" alt="UMKM Image">
+          <img src="image/beranda1.png" width="50%" height="auto" style="float: right; margin-left: 20px;"
+            alt="UMKM Image">
+          <div class="umkm-info">
+            <strong>PILIH UMKM FAVORIT KAMU!</strong>
+            <p>BabizFinder - Banyumas Business Finder <br> Cari UMKM? Pas banget, bisa cari info di sini!</p>
+          </div>
+
         </div>
+
       </div>
 
       <style>
         .umkm-section {
-          text-align: center;
+          overflow: hidden;
+
+        }
+
+        .umkm-info {
+          text-align: left;
+          font-size: 25px;
+          margin-top: 140px;
 
         }
 
         .umkm-section strong {
-          border-bottom: 2px solid #333;
-          padding-bottom: 5px;
+          font-size: 29px;
+        }
+
+        @media only screen and (max-width: 800px) {
+          .umkm-section img {
+            width: 100%;
+            float: none;
+            margin-left: 0;
+          }
+
+          .umkm-info {
+            margin-top: 100px;
+            text-align: left;
+            font-size: 25px;
+          }
+
+          .umkm-section strong {
+            font-size: 29px;
+          }
         }
       </style>
 
+
       <div class="umkm-section">
-        <p><strong>SELECTED UMKM</strong></p>
+        <p><strong>PILIHAN UMKM</strong></p>
       </div>
     </div>
 
@@ -168,7 +194,8 @@
     <div class="container">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3 border-secondary">
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+        <li class="nav-item"><a href="https://instagram.com/babizfinder?igshid=OGQ5ZDc2ODk2ZA=="
+            class="nav-link px-2 text-body-secondary">Follow Us</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
@@ -184,15 +211,15 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-    <!-- Firebase Core -->
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
-
-    <script type="module" src="./script/auth-log.js"></script>
+        <!-- Firebase Core -->
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    
+        <script type="module" src="./script/auth-log.js"></script>
 </body>
 
 </html>
