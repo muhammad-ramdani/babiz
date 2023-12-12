@@ -17,7 +17,7 @@
 <body class="d-flex flex-column min-vh-100">
   <nav class="navbar sticky-top navbar-expand-lg rounded-bottom-4" style="background-color: #FFF200;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="image/logo-babiz.png" width="50px" alt="logo-babiz">
       </a>
       <button class="navbar-toggler my-2 rounded-4 focus-ring" type="button" data-bs-toggle="collapse"
@@ -46,16 +46,14 @@
   </nav>
 
 
-  <main class="container my-4">
-    <header>
-      <h1 style="color: black;">Berdayakan <span style="color: #FFF200;">Banyumas</span>
-      </h1>
+  <main>
+    <header class="container my-4">
+      <h1 style="color: black;">Berdayakan <span style="color: #FFF200;">Banyumas</span></h1>
     </header>
-
+  
     <div class="container">
-      <div id="main-content">
-      </div>
-
+      <div id="main-content"></div>
+  
       <div id="sidebar">
         <div class="umkm-section">
           <img src="image/beranda1.png" width="50%" height="auto" style="float: right; margin-left: 20px;"
@@ -64,51 +62,82 @@
             <strong>PILIH UMKM FAVORIT KAMU!</strong>
             <p>BabizFinder - Banyumas Business Finder <br> Cari UMKM? Pas banget, bisa cari info di sini!</p>
           </div>
-
+          <div class="umkm-buttons mt-4">
+            <a class="btn btn-warning rounded-pill me-3" href="about.html" role="button">Pelajari Selengkapnya</a>
+            <a class="btn btn-secondary rounded-pill" href="umkm.html" role="button">Telusuri</a>
+          </div>
         </div>
-
       </div>
-
-      <style>
-        .umkm-section {
-          overflow: hidden;
-
+    </div>
+  
+    <div class="py-3 rounded-top-4 mt-auto">
+      <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -50px;">
+        <path fill="#FFF200" fill-opacity="1"
+          d="M0,160L48,160C96,160,192,160,288,170.7C384,181,480,203,576,218.7C672,235,768,245,864,218.7C960,192,1056,128,1152,117.3C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+      </svg>
+  
+    </div>
+  
+    <style>
+      .umkm-section {
+        overflow: hidden;
+      }
+  
+      .umkm-info {
+        text-align: left;
+        font-size: 25px;
+        margin-top: 140px;
+      }
+  
+      .umkm-section strong {
+        font-size: 29px;
+      }
+  
+      .umkm-buttons {
+        display: flex;
+        align-items: center;
+      }
+  
+      .btn-warning {
+        background-color: #AFB3FFD9;
+        border-color: #FFF200;
+      }
+  
+      .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+      }
+  
+      .wave-svg {
+        width: 100%;
+        margin-top: 20px;
+      }
+  
+      @media only screen and (max-width: 800px) {
+        .umkm-section img {
+          width: 100%;
+          float: none;
+          margin-left: 0;
         }
-
+  
         .umkm-info {
+          margin-top: 100px;
           text-align: left;
           font-size: 25px;
-          margin-top: 140px;
-
         }
-
+  
         .umkm-section strong {
           font-size: 29px;
         }
-
-        @media only screen and (max-width: 800px) {
-          .umkm-section img {
-            width: 100%;
-            float: none;
-            margin-left: 0;
-          }
-
-          .umkm-info {
-            margin-top: 100px;
-            text-align: left;
-            font-size: 25px;
-          }
-
-          .umkm-section strong {
-            font-size: 29px;
-          }
-        }
-      </style>
+        
+      }
+    </style>
 
 
-      <div class="umkm-section">
-        <p><strong>PILIHAN UMKM</strong></p>
-      </div>
+      <div class="container my-4">
+    <div class="umkm-section">
+          <p><strong>PILIHAN UMKM</strong></p>
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
