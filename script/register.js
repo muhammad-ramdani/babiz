@@ -14,7 +14,12 @@ const database = getDatabase(app);
 let registerButton = document.getElementById("registerBtn");
 
 registerButton.addEventListener("click", (e) => {
+  
+  let namaUsahaReg = document.getElementById("namausaha-reg").value;
   let emailReg = document.getElementById("email-reg").value;
+  let noWhatsAppReg = document.getElementById("noWhatsApp-reg").value;
+  let instagramReg = document.getElementById("instagram-reg").value;
+  let googleMapsReg = document.getElementById("maps-reg").value;
   let passwordReg = document.getElementById("password-reg").value;
 
   createUserWithEmailAndPassword(auth, emailReg, passwordReg)
@@ -22,8 +27,11 @@ registerButton.addEventListener("click", (e) => {
       // Signed in
       const user = userCredential.user;
       set(ref(database, "users/" + user.uid), {
+        namaUsaha: namaUsahaReg,
         email: emailReg,
-        password: passwordReg,
+        noWhatsApp: noWhatsAppReg,
+        instagram: instagramReg,
+        googleMaps: googleMapsReg,
       })
         .then(() => {
           // Data saved successfully!
