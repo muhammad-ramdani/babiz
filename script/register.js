@@ -14,8 +14,6 @@ const database = getDatabase(app);
 let registerButton = document.getElementById("registerBtn");
 
 registerButton.addEventListener("click", (e) => {
-  let nameumkm = document.getElementById("nameumkm").value;
-  let notelp = document.getElementById("notelp-reg").value;
   let emailReg = document.getElementById("email-reg").value;
   let passwordReg = document.getElementById("password-reg").value;
 
@@ -24,8 +22,6 @@ registerButton.addEventListener("click", (e) => {
       // Signed in
       const user = userCredential.user;
       set(ref(database, "users/" + user.uid), {
-        name: nameumkm,
-        notelp: notelp,
         email: emailReg,
         password: passwordReg,
       })

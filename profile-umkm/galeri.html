@@ -75,14 +75,16 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary rounded-4" data-bs-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary rounded-4">Simpan</button>
+                <button id="simpangambar" type="button" class="btn btn-primary rounded-4">Simpan</button>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Gallery -->
       <div class="row">
+        <!-- Sample gallery items -->
         <div class="col-12 col-md-4 mb-4">
           <div class="card rounded-4 border-0">
             <img src="../image/noimage.png" alt="" class="w-100 rounded-4" />
@@ -93,39 +95,7 @@
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card rounded-4 border-0">
-            <img src="../image/noimage.png" alt="" class="w-100 rounded-4" />
-            <div class="card-body px-0">
-              <div class="d-grid gap-2">
-                <button class="btn btn-outline-danger rounded-4" type="button"><i class="bi bi-trash3"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card rounded-4 border-0">
-            <img src="../image/noimage.png" alt="" class="w-100 rounded-4" />
-            <div class="card-body px-0">
-              <div class="d-grid gap-2">
-                <button class="btn btn-outline-danger rounded-4" type="button"><i class="bi bi-trash3"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card rounded-4 border-0">
-            <img src="../image/noimage.png" alt="" class="w-100 rounded-4" />
-            <div class="card-body px-0">
-              <div class="d-grid gap-2">
-                <button class="btn btn-outline-danger rounded-4" type="button"><i class="bi bi-trash3"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Repeat this structure for more gallery items -->
       </div>
     </main>
 
@@ -139,7 +109,7 @@
           <li class="nav-item"><a href="about.html" class="nav-link px-2 text-body-secondary">About</a></li>
         </ul>
         <div class="text-center mb-3">
-          <img src="image/logo-babiz.png" alt="" width="35" />
+          <img src="../image/logo-babiz.png" alt="" width="35" />
         </div>
         <p class="text-center text-body-secondary">&copy; 2023 BaBiz Finder</p>
       </div>
@@ -155,6 +125,6 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 
-    <script type="module" src="../script/auth-log.js"></script>
+    <script type="module" src="../script/gallery.js"></script>
   </body>
 </html>

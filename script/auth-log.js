@@ -1,11 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 // import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 // import { getDatabase } from "firebase/database";
 import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 // import { firebaseConfig } from '/script/config.js';
-import { firebaseConfig } from '/script/config.js';
+import { firebaseConfig } from "/script/config.js";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -35,11 +35,6 @@ loginButton.addEventListener("click", (e) => {
         });
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorMessage);
+      alert("Masukkan data dengan benar!!");
     });
-  signOut(auth)
-    .then(() => {})
-    .catch((error) => {});
 });
