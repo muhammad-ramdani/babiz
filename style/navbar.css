@@ -2,3 +2,9 @@
   font-weight: bold !important;
   color: #656ed3 !important;
 }
+
+.gallery-image {
+  height: 300px; /* Sesuaikan tinggi gambar sesuai preferensi Anda */
+  width: 10%; /* Tetapkan lebar gambar ke 100% */
+  object-fit: cover; /* Jaga aspek rasio gambar */
+}
