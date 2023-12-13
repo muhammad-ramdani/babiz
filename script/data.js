@@ -3,6 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { getDatabase, ref, onValue, update, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { firebaseConfig } from "/script/config.js";
+import firebase from "@firebase/app-compat";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -129,3 +130,16 @@ document.querySelector("#exampleModal").addEventListener("show.bs.modal", async 
     }
   }
 });
+
+
+//test desc dummy
+const dataRef = firebase.database().ref('https://babizfinder-app-default-rtdb.asia-southeast1.firebasedatabase.app/umkm/-NlYLNqhXGueyQE4hISw/desc')
+function updateDataInHtml(data){
+  const dataContainer = document.getElementById('desc-umkm')
+  dataContainer.innerHTML='<p>'+data+'</p>'
+}
+
+dataRef.on('value', function(snapshot){
+  const data = snapshot.val()
+  updateDataInHtml
+})
