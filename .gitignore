@@ -67,7 +67,7 @@ node_modules/
 
 .firebaserc
 
-node_modules/
+*node_modules/*
 
 backup.js/
 
@@ -75,3 +75,4 @@ public/
 
 firebase.json
 
+.gitignore
