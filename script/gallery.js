@@ -8,8 +8,27 @@ import { firebaseConfig } from "/script/config.js";
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const storage = getStorage(app);
+let logoutButton = document.querySelector("#logoutBtn");
 
 let currentUser = null; // Variabel untuk menyimpan informasi pengguna yang sedang login
+
+logoutButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+      alert("Berhasil keluar!");
+      location.href = "https://babizfinder-app.web.app/index.html";
+      // Redirect or perform other actions after logout
+      // Example: window.location.href = "path/to/redirect";
+    })
+    .catch((error) => {
+      // An error happened.
+      console.error("Error while signing out: ", error);
+      alert("Terjadi kesalahan saat keluar!");
+    });
+});
 
 // Ambil informasi pengguna yang sedang login
 onAuthStateChanged(auth, (user) => {

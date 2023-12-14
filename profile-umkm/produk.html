@@ -62,30 +62,40 @@
           <i class="bi bi-plus-lg mx-2"></i>
         </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content rounded-4">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Produk Ke Galeri</h1>
-                <button type="clasebutton" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <input class="form-control rounded-pill" type="file" id="inputGambar" accept="image/*" />
-                <input class="form-control rounded-pill mt-3" type="text" id="namaProduk" placeholder="Nama Produk" />
-                <input class="form-control rounded-pill mt-3" type="number" id="hargaProduk" placeholder="Harga Produk" />
-              </div>
-              <div class="modal-footer">
-                <button type="cancelbutton" class="btn btn-secondary rounded-4" data-bs-dismiss="modal">Tutup</button>
-                <button id="simpangambar" type="button" class="btn btn-primary rounded-4">Simpan</button>
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-4">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tambah Produk ke Galeri</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-body">
+        <form id="productForm">
+          <div class="mb-3">
+            <label for="inputGambar" class="form-label">Gambar</label>
+            <input class="form-control" type="file" id="inputGambar" accept="image/*" required />
+          </div>
+          <div class="mb-3">
+            <label for="namaProduk" class="form-label">Nama Produk</label>
+            <input class="form-control" type="text" id="namaProduk" placeholder="Nama Produk" required />
+          </div>
+          <div class="mb-3">
+            <label for="hargaProduk" class="form-label">Harga Produk</label>
+            <input class="form-control" type="number" id="hargaProduk" placeholder="Harga Produk" required />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary rounded-4" data-bs-dismiss="modal">Tutup</button>
+        <button id="simpanProduk" type="button" class="btn btn-primary rounded-4">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Gallery -->
-      <div class="row" id="galleryItem">
+      <!-- List Produk -->
+      <div class="row" id="listProduk">
         <!-- Gambar-gambar akan muncul di sini -->
       </div>
     </main>
@@ -111,11 +121,15 @@
     <!-- Firebase Core -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 
-    <script type="module" src="../script/gallery.js"></script>
+    <script type="module" src="../script/produk.js"></script>
+
   </body>
+
+  
 </html>

@@ -27,7 +27,7 @@ loginButton.addEventListener("click", (e) => {
         .then(() => {
           // Data saved successfully!
           alert("Selamat Datang!!!");
-          location.href = "http://127.0.0.1:5500//profile-umkm/index.html";
+          location.href = "./profile-umkm/index.html";
         })
         .catch((error) => {
           //the write failed
