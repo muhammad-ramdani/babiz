@@ -22,16 +22,27 @@
 
 #umkmContainer img {
   max-width: 100%;
-  max-height: 210px; /* Ubah nilai ini sesuai kebutuhan */
+  max-height: 500px; /* Ubah nilai ini sesuai kebutuhan */
   object-fit: cover;
 }
 
 #galleryItem img {
   max-width: 100%;
-  max-height: 210px; /* Ubah nilai ini sesuai kebutuhan */
+  max-height: 100px; /* Ubah nilai ini sesuai kebutuhan */
   object-fit: cover;
 }
 
 .card-text {
   text-align: justify;
+}
+
+#center {
+  text-align: justify;
+}
+
+.card-title.custom-font {
+  font-family: 'Noto Sans Linear B', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Raleway', sans-serif
+  
 }
