@@ -3,8 +3,14 @@
   color: #656ed3 !important;
 }
 
-.gallery-image {
-  height: 300px; /* Sesuaikan tinggi gambar sesuai preferensi Anda */
-  width: 10%; /* Tetapkan lebar gambar ke 100% */
-  object-fit: cover; /* Jaga aspek rasio gambar */
+#umkmContainer img {
+  max-width: 100%;
+  max-height: 210px; /* Ubah nilai ini sesuai kebutuhan */
+  object-fit: cover;
+}
+
+#galleryItem img {
+  max-width: 100%;
+  max-height: 210px; /* Ubah nilai ini sesuai kebutuhan */
+  object-fit: cover;
 }

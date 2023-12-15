@@ -13,6 +13,39 @@ const storage = getStorage(app);
 const firestore = getFirestore(app);
 let logoutButton = document.querySelector("#logoutBtn");
 
+const userDataContainer = document.getElementById("userDataContainer");
+
+// Function to display user data immediately upon login
+function displayUserDataOnLogin(user) {
+  if (user) {
+    const uid = user.uid;
+    const userDoc = doc(firestore, "users", uid);
+
+    try {
+      onSnapshot(userDoc, (doc) => {
+        if (doc.exists()) {
+          const userData = doc.data();
+          displayUserData(userData);
+          fillEditProfileForm(userData);
+        }
+      });
+    } catch (error) {
+      console.error("Error fetching user data: ", error);
+      // Handle error
+    }
+  }
+}
+// Check if user is logged in on initial load
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    displayUserDataOnLogin(user);
+  } else {
+    // User is not logged in
+    // Handle this case if needed
+  }
+});
+
+
 logoutButton.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -56,20 +89,20 @@ editProfileForm.addEventListener("click", async (e) => {
     const userDoc = doc(firestore, "users", uid);
 
     try {
-      // Mengunggah file gambar ke Firebase Storage
       const fileInput = document.querySelector('input[type="file"]');
-      const imageFile = fileInput.files[0]; // Mendapatkan file gambar yang diunggah
+      const files = fileInput.files;
 
-      const storageRef = ref(storage, "images/" + imageFile.name);
-      const uploadTask = uploadBytes(storageRef, imageFile);
+      const promises = [];
+      for (const file of files) {
+        const storageRef = ref(storage, `images/${file.name}`);
+        const uploadTask = uploadBytes(storageRef, file);
+        promises.push(uploadTask);
+      }
 
-      uploadTask
-        .then(async (snapshot) => {
-          console.log("Gambar berhasil diunggah");
-          const downloadURL = await getDownloadURL(snapshot.ref);
-
-          // Memperbarui data pengguna dengan URL gambar yang diunggah
-          userData.imageUrl = downloadURL;
+      Promise.all(promises)
+        .then(async (snapshots) => {
+          const downloadURLs = await Promise.all(snapshots.map((snapshot) => getDownloadURL(snapshot.ref)));
+          userData.imageUrls = downloadURLs;
 
           try {
             await setDoc(userDoc, userData);
@@ -107,14 +140,21 @@ function displayUserData(userData) {
   document.getElementById("displayProflokasiText").textContent = userData.googleMaps || "";
   document.getElementById("displayProdesc").textContent = userData.deskripsi || "";
   // Display uploaded image, if available
-  if (userData.imageUrl) {
-    const galleryItem = document.getElementById("galleryItem");
-    const image = document.createElement("img");
-    image.src = userData.imageUrl;
-    image.alt = "Uploaded Image";
-    image.classList.add("img-thumbnail", "m-2", "col-md-3", "mx-auto");
-    image.style.width = "50%"; // Menambahkan style untuk memperbesar ukuran gambar
-    galleryItem.appendChild(image);
+  if (userData.imageUrls && userData.imageUrls.length > 0) {
+    const gallery = document.createElement("div");
+    gallery.classList.add("gallery"); // Tambahkan class gallery (sesuaikan dengan kebutuhan styling Anda)
+
+    userData.imageUrls.forEach((imageUrl) => {
+      const image = document.createElement("img");
+      image.src = imageUrl;
+      image.alt = "Uploaded Image";
+      image.classList.add("img-thumbnail", "m-2", "col-md-3", "mx-auto");
+      image.style.width = "20%"; // Menambahkan style untuk memperbesar ukuran gambar
+
+      gallery.appendChild(image);
+    });
+
+    galleryItem.appendChild(gallery);
   }
 }
 // Function to fill edit profile form with user data
@@ -141,27 +181,6 @@ document.querySelector("#editumkm").addEventListener("show.bs.modal", async () =
           fillEditProfileForm(userData);
         }
       });
-    } catch (error) {
-      console.error("Error fetching user data: ", error);
-      // Handle error
-    }
-  }
-});
-
-// Untuk memuat data pengguna saat halaman dimuat
-document.addEventListener("DOMContentLoaded", async () => {
-  const user = auth.currentUser;
-  if (user) {
-    const uid = user.uid;
-    const userDoc = doc(firestore, "users", uid);
-
-    try {
-      const docSnapshot = await getDoc(userDoc);
-      if (docSnapshot.exists()) {
-        const userData = docSnapshot.data();
-        displayUserData(userData);
-        fillEditProfileForm(userData);
-      }
     } catch (error) {
       console.error("Error fetching user data: ", error);
       // Handle error
