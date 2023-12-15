@@ -94,6 +94,9 @@ editProfileForm.addEventListener("click", async (e) => {
 
 // Function to display user data
 function displayUserData(userData) {
+  // Menghapus semua gambar sebelum menambahkan yang baru
+  const galleryItem = document.getElementById("galleryItem");
+  galleryItem.innerHTML = "";
   // Display user data in HTML elements
   document.getElementById("displayNamaUsaha").textContent = userData.namaUsaha || "";
   document.getElementById("displayProfwa").href = `https://wa.me/${userData.noWhatsApp || ""}`;
@@ -138,6 +141,27 @@ document.querySelector("#editumkm").addEventListener("show.bs.modal", async () =
           fillEditProfileForm(userData);
         }
       });
+    } catch (error) {
+      console.error("Error fetching user data: ", error);
+      // Handle error
+    }
+  }
+});
+
+// Untuk memuat data pengguna saat halaman dimuat
+document.addEventListener("DOMContentLoaded", async () => {
+  const user = auth.currentUser;
+  if (user) {
+    const uid = user.uid;
+    const userDoc = doc(firestore, "users", uid);
+
+    try {
+      const docSnapshot = await getDoc(userDoc);
+      if (docSnapshot.exists()) {
+        const userData = docSnapshot.data();
+        displayUserData(userData);
+        fillEditProfileForm(userData);
+      }
     } catch (error) {
       console.error("Error fetching user data: ", error);
       // Handle error
