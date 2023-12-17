@@ -25,3 +25,5 @@ Buka peramban web (browser).
 - Ketika anda sudah selesai mengedit ataupun sudah selesai pada halaman profil-umkm anda dapat kembali ke halaman beranda dengan mengklik tombol “LogOut”
 
 Dengan mengikuti langkah-langkah di atas, pengguna umum dapat dengan mudah mencari UMKM di Banyumas, sementara pelaku UMKM dapat mengelola dan memperbarui profil mereka dengan mudah melalui aplikasi Babiz Finder.
+
+Note : Branch firebase dan main sama hanya berbeda di commitnya karena adanya error dan tidak bisa di solve ketika merge pull maka branch ini kami biarkan saja .
